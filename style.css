@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    /* variable font range */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    /* variable weight range */
+    font-style: italic;
+}
+
+
+:root {
+
+    --neutral-color-900: hsl(243, 96%, 9%);
+    --neutral-color-800: hsl(243, 27%, 20%);
+    --neutral-color-700: hsl(243, 23%, 24%);
+    --neutral-color-600: hsl(243, 23%, 30%);
+    --neutral-color-300: hsl(240, 6%, 70%);
+    --neutral-color-200: hsl(250, 6%, 84%);
+    --neutral-color-0: hsl(0, 0%, 100%);
+
+    --orange-color-500: hsl(28, 100%, 52%);
+
+    --blue-color-500: hsl(233, 67%, 56%);
+    --blue-color-700: hsl(248, 70%, 36%);
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--neutral-color-900);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--neutral-color-0);
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 80px;
+}
+
+/* Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button always showing "Unit ▾" */
+.dropbtn {
+    background-color: var(--neutral-color-800);
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.icon-units {
+    margin: 0 5px;
+    position: relative;
+    top: 3px;
+}
+
+/* Dropdown hidden by default */
+.dropdown-content {
+    font-family: 'DM Sans', 'Times New Roman';
+    font-size: 1rem;
+    right: 0;
+    /* display: none; */
+    position: absolute;
+    width: max-content;
+    background-color: var(--neutral-color-800);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    z-index: 1;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--neutral-color-0);
+}
+
+.dropdown-content .active {
+
+    display: block;
+}
+
+.dropdown-content .unactive {
+
+    display: none;
+}
+
+/* Options inside */
+.dropdown-content a {
+    color: black;
+    padding: 0.2rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--neutral-color-600);
+    border-radius: 0.5rem;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+
+}
