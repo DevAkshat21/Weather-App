@@ -18,28 +18,54 @@
   <header>
     <img class="logo" src="./assets/images/logo.svg" alt="logo">
     <div class="dropdown">
-      <button class="dropbtn"><i class="icon-units"><img src="assets/images/icon-units.svg" alt="" srcset=""></i> Units
-        <i class="icon-units"><img src="assets\images\icon-dropdown.svg" alt="▾"></i></button>
-      <div class="dropdown-content">
-        <a href="#" data-value="metric" class="unactive">Switch to Metric</a><a href="#" data-value="imperial"
-          class="active"> Switch to Imperial</a>
-        <h4>Temperature</h4>
-        <a href="#" data-value="metric">Celsius (°C)</a>
-        <a href="#" data-value="imperial">Fahrenheit (°F)</a>
-        <hr>
-        <h4>Wind Speed</h4>
-        <a href="#" data-value="metric">km/h</a>
-        <a href="#" data-value="imperial">mph</a>
-        <hr>
-        <h4>Precipitation</h4>
-        <a href="#" data-value="metric">Millimeters (mm)</a>
-        <a href="#" data-value="imperial">Inches (in)</a>
+      <button class="dropbtn">
+        <i class="icon-units"><img src="assets/images/icon-units.svg" alt=""></i>
+        Units
+        <i class="icon-units"><img src="assets/images/icon-dropdown.svg" alt="▾"></i>
+      </button>
 
+      <div class="dropdown-content">
+        <h4>Temperature</h4>
+        <a href="#" data-value="metric">Celsius (°C)
+          <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
+        </a>
+        <a href="#" data-value="imperial">Fahrenheit (°F)
+          <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
+        </a>
+        <hr>
+
+        <h4>Wind Speed</h4>
+        <a href="#" data-value="metric">km/h
+          <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
+        </a>
+        <a href="#" data-value="imperial">mph
+          <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
+        </a>
+        <hr>
+
+        <h4>Precipitation</h4>
+        <a href="#" data-value="metric">Millimeters (mm)
+          <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
+        </a>
+        <a href="#" data-value="imperial">Inches (in)
+          <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
+        </a>
       </div>
     </div>
-
-
   </header>
+  <h1 class="header-text">How's the sky looking today?</h1>
+
+  <div class="search-bar">
+
+    <div class="search">
+      <img src="assets/images/icon-search.svg" alt="Search" />
+      <input type="text" placeholder="Search for a place..." />
+    </div>
+    <div class="search-btn"><button type="submit">Search
+      </button></div>
+
+  </div>
+
 
   Units
 
