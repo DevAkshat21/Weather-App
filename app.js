@@ -32,3 +32,31 @@ document.addEventListener("click", (e) => {
     dropdown.classList.remove("open");
   }
 });
+
+const searchInput = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search-btn button");
+
+function handleSearch() {
+  const cityName = searchInput.value.trim();
+
+  if (cityName) {
+    console.log("Searching for:", cityName);
+    // 🔹 Later you will replace this with your API call
+    // fetchWeather(cityName);
+  } else {
+    console.log("Please enter a city name");
+  }
+}
+
+// Trigger search when button clicked
+searchBtn.addEventListener("click", handleSearch);
+
+// Trigger search when Enter pressed inside input
+searchInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
+});
+
+// Trigger search when Enter pressed inside input
+searchInput.addEventListener("search", handleSearch);
