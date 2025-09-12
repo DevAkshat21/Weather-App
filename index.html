@@ -26,32 +26,40 @@
 
       <div class="dropdown-content">
         <h4>Temperature</h4>
-        <a href="#" data-value="metric">Celsius (°C)
+        <button type="button" data-group="temp" data-value="metric" class="active">
+          Celsius (°C)
           <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
-        </a>
-        <a href="#" data-value="imperial">Fahrenheit (°F)
+        </button>
+        <button type="button" data-group="temp" data-value="imperial">
+          Fahrenheit (°F)
           <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
-        </a>
+        </button>
         <hr>
 
         <h4>Wind Speed</h4>
-        <a href="#" data-value="metric">km/h
+        <button type="button" data-group="wind" data-value="metric" class="active">
+          km/h
           <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
-        </a>
-        <a href="#" data-value="imperial">mph
+        </button>
+        <button type="button" data-group="wind" data-value="imperial">
+          mph
           <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
-        </a>
+        </button>
         <hr>
 
         <h4>Precipitation</h4>
-        <a href="#" data-value="metric">Millimeters (mm)
+        <button type="button" data-group="precip" data-value="metric" class="active">
+          Millimeters (mm)
           <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
-        </a>
-        <a href="#" data-value="imperial">Inches (in)
+        </button>
+        <button type="button" data-group="precip" data-value="imperial">
+          Inches (in)
           <i class="check-icon"><img src="assets/images/icon-checkmark.svg" alt="✔"></i>
-        </a>
+        </button>
       </div>
     </div>
+
+
   </header>
   <h1 class="header-text">How's the sky looking today?</h1>
 
@@ -113,6 +121,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="app.js"></script>
+
 </body>
 
 </html>

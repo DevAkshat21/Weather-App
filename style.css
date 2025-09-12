@@ -63,7 +63,7 @@ header {
 /* Button always showing "Unit ▾" */
 .dropbtn {
     background-color: var(--neutral-color-800);
-    color: white;
+    color: var(--neutral-color-0);
     padding: 10px 20px;
     font-size: 14px;
     border: none;
@@ -82,11 +82,8 @@ header {
 /* Dropdown hidden by default */
 .dropdown-content {
     font-family: 'DM Sans', sans-serif;
-    ;
     font-size: 1rem;
     right: 0;
-    display: none;
-    /* keep hidden until hover/click */
     position: absolute;
     width: max-content;
     background-color: var(--neutral-color-800);
@@ -97,6 +94,23 @@ header {
     padding: 1rem;
     flex-direction: column;
     color: var(--neutral-color-0);
+
+    /* hide with animation */
+    opacity: 0;
+    transform: translateY(-100px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Show dropdown when open */
+.dropdown.open .dropdown-content {
+    display: flex;
+    /* flex layout */
+    opacity: 1;
+    /* fade in */
+    transform: translateY(0);
+    /* slide down */
+    pointer-events: auto;
 }
 
 /* Section titles inside dropdown */
@@ -107,39 +121,42 @@ header {
     color: var(--neutral-color-200);
 }
 
-/* Options inside */
-.dropdown-content a {
+/* Options inside dropdown */
+.dropdown-content button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
     color: var(--neutral-color-0);
     margin: 0.2rem 0;
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
     border-radius: 0.5rem;
+    cursor: pointer;
+    font: inherit;
+    /* keep DM Sans font */
 }
 
-.dropdown-content a:hover {
+.dropdown-content button:hover {
     background-color: var(--neutral-color-700);
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: flex;
-}
-
-/* Checkmark icons */
+/* Checkmark dimmed by default */
 .check-icon {
+    opacity: 0;
     margin-left: 1rem;
-    position: relative;
-    top: -2px;
-    opacity: 0.3;
-    /* dimmed when not active */
 }
 
-.dropdown-content a.active .check-icon {
+/* Only active option shows bright checkmark */
+.dropdown-content button.active .check-icon {
     opacity: 1;
-    /* fully visible when active */
+}
+
+.dropdown-content button.active {
+    background-color: var(--neutral-color-700);
+
 }
 
 .header-text {
