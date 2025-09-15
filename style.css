@@ -167,6 +167,12 @@ header {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+    .header-text {
+        font-size: 2rem;
+    }
+}
+
 .search-bar {
     margin: 3rem 0;
     display: flex;
@@ -241,4 +247,10 @@ header {
 /* Make placeholder a bit lighter for better readability */
 .search-bar input::placeholder {
     color: var(--neutral-color-400);
+}
+
+@media screen and (max-width: 600px) {
+    .search {
+        width: 100%;
+    }
 }
